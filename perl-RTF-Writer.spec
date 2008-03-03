@@ -1,4 +1,3 @@
-
 %define realname   RTF-Writer
 %define version    1.11
 %define release    %mkrel 1
@@ -23,7 +22,6 @@ BuildRequires: perl(strict)
 BuildArch: noarch
 
 %description
-
 This module is for generating documents in Rich Text Format. 
 
 This module is a class; an object belonging to this class acts like an
@@ -54,6 +52,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog README META.yml
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
-
-
