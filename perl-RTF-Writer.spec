@@ -1,6 +1,6 @@
 %define realname   RTF-Writer
 %define version    1.11
-%define release    %mkrel 3
+%define release    %mkrel 4
 
 Name:       perl-%{realname}
 Version:    %{version}
