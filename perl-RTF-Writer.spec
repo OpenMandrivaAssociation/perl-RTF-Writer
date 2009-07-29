@@ -1,25 +1,24 @@
-%define realname   RTF-Writer
-%define version    1.11
-%define release    %mkrel 4
+%define upstream_name    RTF-Writer
+%define upstream_version 1.11
 
-Name:       perl-%{realname}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:    for generating documents in Rich Text Format
-Source:     http://www.cpan.org/modules/by-module/RTF/%{realname}-%{version}.tar.gz
-Url:        http://search.cpan.org/dist/%{realname}
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: perl-devel
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/RTF/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(Carp)
 BuildRequires: perl(Exporter)
 BuildRequires: perl(File::Path)
 BuildRequires: perl(Image::Size)
 BuildRequires: perl(UNIVERSAL)
 BuildRequires: perl(strict)
-
 BuildArch: noarch
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module is for generating documents in Rich Text Format. 
@@ -31,7 +30,7 @@ Incidentally, this module also exports a few useful functions, upon
 request.
 
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
