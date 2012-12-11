@@ -17,8 +17,8 @@ BuildRequires: perl(File::Path)
 BuildRequires: perl(Image::Size)
 BuildRequires: perl(UNIVERSAL)
 BuildRequires: perl(strict)
+BuildRequires: perl-devel
 BuildArch: noarch
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module is for generating documents in Rich Text Format. 
@@ -40,14 +40,33 @@ request.
 make test
 
 %install
-rm -rf $RPM_BUILD_ROOT
 %makeinstall_std
 
-%clean
-rm -rf $RPM_BUILD_ROOT
-
 %files
-%defattr(-,root,root)
 %doc ChangeLog README META.yml
 %{_mandir}/man3/*
 %perl_vendorlib/*
+
+
+%changelog
+* Mon Apr 25 2011 Funda Wang <fwang@mandriva.org> 1.110.0-2mdv2011.0
++ Revision: 658877
+- rebuild for updated spec-helper
+
+* Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 1.110.0-1mdv2010.0
++ Revision: 404359
+- rebuild using %%perl_convert_version
+
+* Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 1.11-4mdv2009.0
++ Revision: 258331
+- rebuild
+
+* Thu Jul 24 2008 Thierry Vignaud <tv@mandriva.org> 1.11-3mdv2009.0
++ Revision: 246409
+- rebuild
+
+* Mon Mar 03 2008 Olivier Thauvin <nanardon@mandriva.org> 1.11-1mdv2008.1
++ Revision: 178007
+- import perl-RTF-Writer
+
+
