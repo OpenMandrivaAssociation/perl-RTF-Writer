@@ -2,14 +2,14 @@
 %define upstream_version 1.11
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    4
+Version:    %{upstream_version}
+Release:    5
 
 Summary:    for generating documents in Rich Text Format
 License:    GPL+ or Artistic
 Group:      Development/Perl
-Url:        https://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/RTF/%{upstream_name}-%{upstream_version}.tar.gz
+Url:        https://metacpan.org/dist/RTF-Writer
+Source0:    https://cpan.metacpan.org/authors/id/S/SB/SBURKE/RTF-Writer-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl(Carp)
