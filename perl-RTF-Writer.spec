@@ -1,15 +1,13 @@
 %define upstream_name    RTF-Writer
-%define upstream_version 1.11
-
 Name:       perl-%{upstream_name}
-Version:    %{upstream_version}
-Release:    5
+Version:    1.11
+Release:    6
 
 Summary:    for generating documents in Rich Text Format
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        https://metacpan.org/dist/RTF-Writer
-Source0:    https://cpan.metacpan.org/authors/id/S/SB/SBURKE/RTF-Writer-%{upstream_version}.tar.gz
+Source0:    https://cpan.metacpan.org/authors/id/S/SB/SBURKE/RTF-Writer-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl(Carp)
@@ -31,7 +29,7 @@ Incidentally, this module also exports a few useful functions, upon
 request.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -56,9 +54,7 @@ make test
 
 * Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 1.110.0-1mdv2010.0
 + Revision: 404359
-- rebuild using %%perl_convert_version
-
-* Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 1.11-4mdv2009.0
+- rebuild using %1.11 Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 1.11-4mdv2009.0
 + Revision: 258331
 - rebuild
 
